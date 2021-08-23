@@ -8,4 +8,7 @@ node{
     stage("archive"){
         archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
     }
+    stage("deploy"){
+        bat 'nohup java -jar target/*.jar &'
+    }
 }
