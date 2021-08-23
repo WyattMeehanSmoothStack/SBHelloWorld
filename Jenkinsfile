@@ -3,12 +3,12 @@ node{
         git 'https://github.com/WyattMeehanSmoothStack/SBHelloWorld.git'
     }
     stage("build"){
-            bat 'mvn clean package'
+        sh 'mvn clean package'
     }
     stage("archive"){
         archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
     }
     stage("deploy"){
-        bat 'nohup java -jar target/*.jar &'
+        sh 'nohup java -jar target/*.jar &'
     }
 }
