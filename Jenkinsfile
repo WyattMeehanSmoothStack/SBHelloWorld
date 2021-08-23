@@ -9,6 +9,6 @@ node{
         archiveArtifacts artifacts: 'target/*.jar', followSymlinks: false
     }
     stage("deploy"){
-        sh 'nohup java -jar target/*.jar &'
+        sh 'nohup java -jar target/helloworldspring-0.0.1-SNAPSHOT.jar &'
     }
 }
