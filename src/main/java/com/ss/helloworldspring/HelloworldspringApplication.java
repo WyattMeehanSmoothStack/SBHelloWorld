@@ -9,7 +9,6 @@ public class HelloworldspringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HelloworldspringApplication.class, args);
 	}
-
 	
 	
 }
